@@ -7,9 +7,18 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    
   </head>
 
   <body>
-    <%= yield %>
+    <%= render partial:'/layouts/navbar' %>
+    <div class="wrapper style2">
+			<article id="main" class="container special">
+				<p>
+					<%= yield %>
+				</p>
+			</article>
+		</div>
+    <%= render partial:'/layouts/footer' %>
   </body>
 </html>
